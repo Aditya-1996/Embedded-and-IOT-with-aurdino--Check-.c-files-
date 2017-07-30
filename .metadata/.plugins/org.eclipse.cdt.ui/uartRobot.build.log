@@ -1,0 +1,50 @@
+09:49:38 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     414 bytes (0.2% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (414 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 414 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 414 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.07s
+
+avrdude: verifying ...
+avrdude: 414 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+09:49:39 Build Finished (took 1s.50ms)
+

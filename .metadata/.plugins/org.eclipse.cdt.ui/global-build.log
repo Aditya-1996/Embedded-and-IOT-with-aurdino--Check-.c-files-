@@ -1,0 +1,1483 @@
+09:03:10 **** Clean-only build of configuration Release for project uartRobot ****
+make clean 
+rm -rf  uartRobot.hex  ./main.o ./uart.o  uartRobot.eep  sizedummy  uartRobot.lss  ./main.d ./uart.d  uartRobot.elf
+ 
+09:03:12 **** Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     320 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:23:40 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     356 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cstk500v2 -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_ReceiveMessage(): timeout
+Command canceled
+09:25:35 **** Build of configuration Release for project uartRobot ****
+make all 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     356 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cstk500v2 -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_getsync(): timeout communicating with programmer
+
+Command canceled
+09:28:01 **** Build of configuration Release for project uartRobot ****
+make all 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     356 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (356 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 356 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 356 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.06s
+
+avrdude: verifying ...
+avrdude: 356 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:29:46 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     332 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+avrdude: ser_open(): can't open device "\\.\COM8": Access is denied.
+
+
+avrdude: ser_drain(): read error: The handle is invalid.
+
+
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_getsync(): timeout communicating with programmer
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+09:29:57 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     332 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+avrdude: ser_open(): can't open device "\\.\COM8": Access is denied.
+
+
+avrdude: ser_drain(): read error: The handle is invalid.
+
+
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_getsync(): timeout communicating with programmer
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+09:30:07 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     332 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+avrdude: ser_open(): can't open device "\\.\COM8": Access is denied.
+
+
+avrdude: ser_drain(): read error: The handle is invalid.
+
+
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_getsync(): timeout communicating with programmer
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+09:30:35 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     332 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (332 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 332 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 332 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.06s
+
+avrdude: verifying ...
+avrdude: 332 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:31:53 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     332 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (332 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 332 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 332 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.06s
+
+avrdude: verifying ...
+avrdude: 332 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:32:22 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     332 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (332 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 332 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 332 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.06s
+
+avrdude: verifying ...
+avrdude: 332 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:33:12 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     340 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (340 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 340 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 340 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.06s
+
+avrdude: verifying ...
+avrdude: 340 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:33:56 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     356 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (356 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 356 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 356 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.07s
+
+avrdude: verifying ...
+avrdude: 356 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:35:25 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     372 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+avrdude: ser_open(): can't open device "\\.\COM8": The system cannot find the file specified.
+
+
+avrdude: ser_drain(): read error: The handle is invalid.
+
+
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_getsync(): timeout communicating with programmer
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+09:35:36 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     372 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (372 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 372 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 372 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.07s
+
+avrdude: verifying ...
+avrdude: 372 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:36:31 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     372 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (372 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 372 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 372 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.07s
+
+avrdude: verifying ...
+avrdude: 372 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:37:58 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     388 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+avrdude: ser_open(): can't open device "\\.\COM8": Access is denied.
+
+
+avrdude: ser_drain(): read error: The handle is invalid.
+
+
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_getsync(): timeout communicating with programmer
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+09:38:06 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     388 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (388 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 388 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 388 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.07s
+
+avrdude: verifying ...
+avrdude: 388 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:38:39 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     388 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+avrdude: ser_open(): can't open device "\\.\COM8": Access is denied.
+
+
+avrdude: ser_drain(): read error: The handle is invalid.
+
+
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: ser_send(): write error: sorry no info avail
+avrdude: stk500_send(): failed to send command to serial port
+avrdude: ser_recv(): read error: The handle is invalid.
+
+
+avrdude: stk500v2_ReceiveMessage(): timeout
+avrdude: stk500v2_getsync(): timeout communicating with programmer
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+09:38:54 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     388 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (388 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 388 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 388 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.07s
+
+avrdude: verifying ...
+avrdude: 388 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:46:04 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:47:6: warning: implicit declaration of function '_delay_ms' [-Wimplicit-function-declaration]
+      _delay_ms(3000);
+      ^
+Finished building: ../main.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+./main.o: In function `main':
+main.c:(.text.startup.main+0x40): undefined reference to `_delay_ms'
+collect2.exe: error: ld returned 1 exit status
+make: *** [uartRobot.elf] Error 1
+09:46:14 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+./main.o: In function `main':
+main.c:(.text.startup.main+0x40): undefined reference to `_delay_ms'
+collect2.exe: error: ld returned 1 exit status
+make: *** [uartRobot.elf] Error 1
+09:46:18 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+./main.o: In function `main':
+main.c:(.text.startup.main+0x40): undefined reference to `_delay_ms'
+collect2.exe: error: ld returned 1 exit status
+make: *** [uartRobot.elf] Error 1
+09:46:35 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+./main.o: In function `main':
+main.c:(.text.startup.main+0x40): undefined reference to `_delay_ms'
+collect2.exe: error: ld returned 1 exit status
+make: *** [uartRobot.elf] Error 1
+09:47:20 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:13:24: fatal error: utils/delay.h: No such file or directory
+ #include<utils/delay.h>
+                        ^
+compilation terminated.
+make: *** [main.o] Error 1
+09:47:57 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega2560 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: uartRobot.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,uartRobot.map -mmcu=atmega2560 -o "uartRobot.elf"  ./main.o ./uart.o   
+Finished building target: uartRobot.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S uartRobot.elf  >"uartRobot.lss"
+Finished building: uartRobot.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex uartRobot.elf  "uartRobot.hex"
+Finished building: uartRobot.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex uartRobot.elf  "uartRobot.eep"
+Finished building: uartRobot.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     414 bytes (0.2% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% -0.00s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (414 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 414 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 414 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.07s
+
+avrdude: verifying ...
+avrdude: 414 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:48:30 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     414 bytes (0.2% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (414 bytes):
+
+Writing | ################################################## | 100% 0.07s
+
+avrdude: 414 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 414 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.07s
+
+avrdude: verifying ...
+avrdude: 414 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:48:56 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     414 bytes (0.2% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% -0.00s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (414 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 414 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 414 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.06s
+
+avrdude: verifying ...
+avrdude: 414 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+09:49:38 **** Incremental Build of configuration Release for project uartRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 uartRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     414 bytes (0.2% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cwiring -PCOM8 -b115200 -D -Uflash:w:uartRobot.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "uartRobot.hex"
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: writing flash (414 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 414 bytes of flash written
+avrdude: verifying flash memory against uartRobot.hex:
+avrdude: load data flash data from input file uartRobot.hex:
+avrdude: input file uartRobot.hex auto detected as Intel Hex
+avrdude: input file uartRobot.hex contains 414 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.07s
+
+avrdude: verifying ...
+avrdude: 414 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 

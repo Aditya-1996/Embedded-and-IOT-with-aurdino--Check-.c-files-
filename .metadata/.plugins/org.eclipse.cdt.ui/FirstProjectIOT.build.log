@@ -1,0 +1,50 @@
+14:27:36 **** Build of configuration Debug for project FirstProjectIOT ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 FirstProjectIOT.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:    1298 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cstk500v2 -PCOM7 -b115200 -D -Uflash:w:FirstProjectIOT.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% -0.00s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "FirstProjectIOT.hex"
+avrdude: input file FirstProjectIOT.hex auto detected as Intel Hex
+avrdude: writing flash (1298 bytes):
+
+Writing | ################################################## | 100% 0.25s
+
+avrdude: 1298 bytes of flash written
+avrdude: verifying flash memory against FirstProjectIOT.hex:
+avrdude: load data flash data from input file FirstProjectIOT.hex:
+avrdude: input file FirstProjectIOT.hex auto detected as Intel Hex
+avrdude: input file FirstProjectIOT.hex contains 1298 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.20s
+
+avrdude: verifying ...
+avrdude: 1298 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+14:27:38 Build Finished (took 1s.677ms)
+

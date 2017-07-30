@@ -1,0 +1,50 @@
+16:05:12 **** Incremental Build of configuration Release for project urattest ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 urattest.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     342 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pm2560 -cstk500v2 -PCOM7 -b115200 -D -Uflash:w:urattest.hex:a
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e9801 (probably m2560)
+avrdude: reading input file "urattest.hex"
+avrdude: input file urattest.hex auto detected as Intel Hex
+avrdude: writing flash (342 bytes):
+
+Writing | ################################################## | 100% 0.08s
+
+avrdude: 342 bytes of flash written
+avrdude: verifying flash memory against urattest.hex:
+avrdude: load data flash data from input file urattest.hex:
+avrdude: input file urattest.hex auto detected as Intel Hex
+avrdude: input file urattest.hex contains 342 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 0.07s
+
+avrdude: verifying ...
+avrdude: 342 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+16:05:13 Build Finished (took 1s.155ms)
+

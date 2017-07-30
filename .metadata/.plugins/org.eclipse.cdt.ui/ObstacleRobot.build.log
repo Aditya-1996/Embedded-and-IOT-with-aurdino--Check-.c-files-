@@ -1,0 +1,25 @@
+10:45:15 **** Incremental Build of configuration Release for project ObstacleRobot ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega2560 ObstacleRobot.elf
+AVR Memory Usage
+----------------
+Device: atmega2560
+
+Program:     318 bytes (0.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+Invoking: AVRDude
+C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude -pnull -cwiring -PCOM3 -b115200 -D -Uflash:w:ObstacleRobot.hex:a
+avrdude: can't open config file "": Invalid argument
+avrdude: error reading system wide configuration file ""
+make: *** [avrdudedummy] Error 1
+
+10:45:15 Build Finished (took 134ms)
+
